@@ -105,7 +105,7 @@ async def make_collections() -> str:
 
 def system_cmd(
     pattern=None,
-    allow_sibyl=True,
+    allow_nex=True,
     allow_enforcer=False,
     allow_inspectors=False,
     allow_slash=True,
@@ -116,9 +116,9 @@ def system_cmd(
         args["pattern"] = re.compile(r"[\?\.!/](" + pattern + r")(?!@)")
     else:
         args["pattern"] = re.compile(r"[\?\.!]" + pattern)
-    if allow_sibyl and allow_enforcer:
+    if allow_nex and allow_enforcer:
         args["from_users"] = ENFORCERS
-    elif allow_inspectors and allow_sibyl:
+    elif allow_inspectors and allow_nex:
         args["from_users"] = INSPECTORS
     else:
         args["from_users"] = NEX
