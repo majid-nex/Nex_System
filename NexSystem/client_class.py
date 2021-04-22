@@ -26,7 +26,7 @@ class NexClient(TelegramClient):
         """Declare stuff."""
         self.gban_logs = GBAN_MSG_LOGS
         self.approved_logs = Nex_approved_logs
-        self.log = Sibyl_logs
+        self.log = Nex_logs
         self.bot = None
         self.processing = 0
         self.processed = 0
